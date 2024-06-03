@@ -16,7 +16,7 @@ public class RolEntity {
     
     @Id
     @GeneratedValue(strategy =  GenerationType.SEQUENCE)
-    @Column(name = "rol_id")
+    @Column(name ="rol_id")
     private Short id;
 
     @Column(name = "rol_nombre")

@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import com.umsa.proyec_admin.dtos.CreateUsuarioDto;
 import com.umsa.proyec_admin.dtos.LoginDto;
+import com.umsa.proyec_admin.dtos.LoginResultDto;
 import com.umsa.proyec_admin.dtos.UsuarioDto;
 
 
@@ -22,7 +23,7 @@ public interface IUsuario {
 
     void deleteUsuario(Short id);
 
-    UsuarioDto autentifiacion(LoginDto loginDto);
-
+    LoginResultDto autentifiacion(LoginDto loginDto);
+    
 
 }

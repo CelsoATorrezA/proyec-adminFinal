@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.umsa.proyec_admin.dtos.CreateUsuarioDto;
 import com.umsa.proyec_admin.dtos.LoginDto;
+import com.umsa.proyec_admin.dtos.LoginResultDto;
 import com.umsa.proyec_admin.dtos.UsuarioDto;
 import com.umsa.proyec_admin.services.IUsuario;
 
@@ -38,6 +39,7 @@ public class UsuarioController {
     @GetMapping("/{id}")
         public Optional<UsuarioDto> findOneById(@PathVariable Short id){
             return this.usuarioservices.findUsuarioById(id);
+
         }
     @PostMapping()
         public UsuarioDto createUsuariodto(@RequestBody CreateUsuarioDto usuario){
@@ -53,8 +55,8 @@ public class UsuarioController {
         }
  
     @PostMapping("/login")
-public ResponseEntity<UsuarioDto> login(@RequestBody LoginDto loginDto) {
-    UsuarioDto usuarioDto = usuarioservices.autentifiacion(loginDto);
+public ResponseEntity<LoginResultDto> login(@RequestBody LoginDto loginDto) {
+    LoginResultDto usuarioDto = usuarioservices.autentifiacion(loginDto);
     if (usuarioDto != null) {
         // Autenticación exitosa
         return ResponseEntity.ok(usuarioDto);

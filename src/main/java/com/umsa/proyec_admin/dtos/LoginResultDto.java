@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class UsuarioDto {
+public class LoginResultDto {
 
     private Short id;
     
@@ -13,5 +13,6 @@ public class UsuarioDto {
     
     private String password;
 
-    private Short rolid;
+
+    private String nombreRol;
 }

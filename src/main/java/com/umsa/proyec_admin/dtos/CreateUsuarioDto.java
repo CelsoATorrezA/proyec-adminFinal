@@ -11,4 +11,6 @@ public class CreateUsuarioDto {
     private String nombreusu;
     
     private String password;
+
+    private Short rolid;
 }
